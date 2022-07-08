@@ -4,7 +4,7 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Create New Students</h2>
+                <h1>Create New Students</h1>
             </div>
             <div class="float-right">
                 <a class="btn btn-secondary" href="{{ route('students.index') }}"> Back</a>
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Last Name:</strong>
+                    <strong>Last Name:</strong> 
                     <input type="text" name="LastName" class="form-control" placeholder="Last Name Students">
                 </div>
             </div>
@@ -42,10 +42,10 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Enrollment Date :</strong>
-                    <textarea class="form-control" style="height:150px" name="EnrollmentDate" placeholder="Enrollment Date"></textarea>
+                    <input type="date" name="EnrollmentDate" class="form-control" placeholder="Enrollment Date">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-right">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>

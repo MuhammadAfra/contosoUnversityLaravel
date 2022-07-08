@@ -26,6 +26,9 @@
             <th width="280px"class="text-center">EnrollmentDate</th>
             <th width="280px"class="text-center">Action</th>
         </tr>
+        <?php
+        $i=0;
+        ?>
         @foreach ($students as $siswa)
             <tr>
                 <td class="text-center">{{ ++$i }}</td>
@@ -33,11 +36,11 @@
                 <td>{{ $siswa->FirstMidName }}</td>
                 <td>{{ $siswa->EnrollmentDate }}</td>
                 <td class="text-center">
-                    <form action="{{ route('students.destroy', $siswa->id) }}" method="POST">
+                    <form action="{{ route('students.destroy', $siswa->StudentID) }}" method="POST">
 
-                        <a class="btn btn-info btn-sm" href="{{ route('students.show', $siswa->id) }}">Show</a>
+                        <a class="btn btn-info btn-sm" href="{{ route('students.show', $siswa->StudentID) }}">Show</a>
 
-                        <a class="btn btn-primary btn-sm" href="{{ route('students.edit', $siswa->id) }}">Edit</a>
+                        <a class="btn btn-primary btn-sm" href="{{ route('students.edit', $siswa->StudentID) }}">Edit</a>
 
                         @csrf
                         @method('DELETE')

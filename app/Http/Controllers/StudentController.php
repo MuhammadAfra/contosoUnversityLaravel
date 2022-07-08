@@ -42,7 +42,7 @@ class StudentController extends Controller
         $request->validate([
             'LastName' => 'required',
             'FirstMidName'=> 'required',
-            'EnrollmentDatae'=> 'required',
+            'EnrollmentDate'=> 'required',
         ]);
 
         Student::create($request->all());
@@ -85,6 +85,7 @@ class StudentController extends Controller
     {
         //
         $request->validate([
+            "StudentID" =>'required',
             'LastName'=>'required',
             'FirstMidName'=>'required',
             'EnrollmentDate'=>'required',
@@ -92,7 +93,7 @@ class StudentController extends Controller
 
         $students->update($request->all());
 
-        return redirect()-route('students.index')-with('succes','Students Berhasil diupdate');
+        return redirect()->route('students.index')->with('succes','Students Berhasil diupdate');
     }
 
     /**
@@ -106,6 +107,6 @@ class StudentController extends Controller
         //
         $students->delete();    
 
-        return redirect('student.index')->with('succes','Students berhasil dihapus');
+        return redirect()->route('students.index')->with('succes','Students berhasil dihapus');
     }
-}
+} 
